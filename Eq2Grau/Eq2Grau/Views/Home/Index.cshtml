@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Página inicial";
 }
 
+<!-- comentário em HTML  -->
+@*   comentário em RAZOR  *@
+
+@*
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+*@
+
+<div class="text-center">
+    <h1 class="display-4">Cálculo das Raízes de uma Equação de 2º Grau</h1>
+    <img src="https://www.casadasciencias.org/storage/app/uploads/public/5e0/df9/6ae/5e0df96ae8108558117106.png?contador=1"
+     alt="Imagem com a fórmula resolvente de 2º grau a ser aplicada."
+     width="200px"
+    />
+</div>
+
+
+<form>
+    <div>
+        indique o valor parâmetro <b>a</b>: <input type="text" name="A" /> <br />
+        indique o valor parâmetro <b>b</b>: <input type="text" name="B" /> <br />
+        indique o valor parâmetro <b>c</b>: <input type="text" name="C" /> <br />
+        <input type="submit" value="Calcular" />
+    </div>
+    @*
+    <input type="text" id="A" />
+    <input type="text" name="A" />
+    O 'id' é para referenciar a textbox no javascript no browser.
+    No servidor usa-se o 'name'.
+    *@
+</form>
