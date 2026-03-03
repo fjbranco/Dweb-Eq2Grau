@@ -14,14 +14,14 @@
 
 <div class="text-center">
     <h1 class="display-4">Cálculo das Raízes de uma Equação de 2º Grau</h1>
-    <img src="https://www.casadasciencias.org/storage/app/uploads/public/5e0/df9/6ae/5e0df96ae8108558117106.png?contador=1"
+    <img src="https://images.educamaisbrasil.com.br/content/banco_de_imagens/mb/D/formula-de-bhaskara-equacao.jpg"
      alt="Imagem com a fórmula resolvente de 2º grau a ser aplicada."
      width="200px"
-    />
+     style="filter: invert(1);" />
 </div>
 
 
-<form>
+<form method="post">
     <div>
         indique o valor parâmetro <b>a</b>: <input type="text" name="A" /> <br />
         indique o valor parâmetro <b>b</b>: <input type="text" name="B" /> <br />
@@ -36,9 +36,24 @@
     *@
 </form>
 
+@*
 <div>
     <br/> <p>Raízes da equação:</p>
     <p>x1=@ViewBag.X1</p>
     <p>x2=@ViewBag.X2</p>
 
 </div>
+*@
+
+<br />
+
+@* Se houver errom escrever a mensagem de erro *@
+@if (ViewBag.Erro != null)
+        @ViewBag.Erro
+
+@* apresentar o resultado caso exista *@
+@if (ViewBag.X1 != null && ViewBag.X2 != null)
+{
+    <p><strong>X1 =</strong> @ViewBag.X1</p>
+    <p><strong>X2 =</strong> @ViewBag.X2</p>
+}
